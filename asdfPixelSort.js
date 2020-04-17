@@ -32,8 +32,7 @@ let saved = false;
 function setup() {
   img = loadImage(imgFileName+"."+fileType);
   
-  // use only numbers (not variables) for the size() command, Processing 3
-  size(1, 1);
+  createCanvas(400, 400);
   
   // allow resize and update surface to image dimensions
   surface.setResizable(true);
@@ -126,8 +125,8 @@ function sortRow() {
     
     let isortLength = xend-x;
     
-    color[] unsorted = new color[sortLength];
-    color[] sorted = new color[sortLength];
+    let unsorted = [];
+    let sorted = []];
     
     for(let i=0; i<sortLength; i++) {
       unsorted[i] = img.pixels[x + i + y * img.width];
@@ -176,8 +175,8 @@ function sortColumn() {
     
     let sortLength = yend-y;
     
-    color[] unsorted = new color[sortLength];
-    color[] sorted = new color[sortLength];
+    let unsorted = [];
+    let sorted = [];
     
     for(let i=0; i<sortLength; i++) {
       unsorted[i] = img.pixels[x + (y+i) * img.width];
